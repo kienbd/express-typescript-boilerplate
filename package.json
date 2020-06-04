@@ -2,6 +2,10 @@
   "name": "server",
   "version": "0.0.0",
   "private": true,
+  "bin": {
+    "server": "bin/wwww"
+  },
+  "main": "index.js",
   "scripts": {
     "start": "node ./bin/www",
     "serve": "npm run build && npm start",
@@ -10,9 +14,9 @@
     "watch:ts": "tsc -w",
     "watch:node": "nodemon ./bin/www",
     "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch:ts\" \"npm run watch:node\"",
-    "test": "npm run test:js -- --watchAll",
-    "test:js": "jest",
-    "test:coverage": "npm run test:js -- --coverage"
+    "test": "jest",
+    "test:watch": "npm run test -- --watchAll",
+    "test:coverage": "npm run test -- --coverage"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -26,9 +30,12 @@
     "@types/jest": "^25.2.3",
     "@types/morgan": "^1.9.0",
     "@types/node": "^14.0.9",
+    "@types/supertest": "^2.0.9",
     "concurrently": "^5.2.0",
     "jest": "^26.0.1",
     "nodemon": "^2.0.4",
+    "supertest": "^4.0.2",
+    "ts-jest": "^26.1.0",
     "tsc": "^1.20150623.0",
     "tslint": "^6.1.2",
     "typescript": "^3.9.3"

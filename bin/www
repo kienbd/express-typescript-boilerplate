@@ -5,9 +5,9 @@
  */
 
 var app = require('../dist/app').default;
+var config = require('../dist/config').default;
 var debug = require('debug')('todo:server');
 var http = require('http');
-var config = require('../dist/config').default;
 // var wss = require('../dist/socket');
 
 /**
