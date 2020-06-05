@@ -13,7 +13,8 @@
     "build:ts": "tsc",
     "watch:ts": "tsc -w",
     "watch:node": "nodemon ./bin/www",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch:ts\" \"npm run watch:node\"",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch:ts\" \"npm run watch:node\"",
+    "lint": "tslint --project \"tsconfig.json\"",
     "test": "jest",
     "test:watch": "npm run test -- --watchAll",
     "test:coverage": "npm run test -- --coverage"

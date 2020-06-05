@@ -8,7 +8,6 @@ var app = require('../dist/app').default;
 var config = require('../dist/config').default;
 var debug = require('debug')('todo:server');
 var http = require('http');
-// var wss = require('../dist/socket');
 
 /**
  * Get port from environment and store in Express.
@@ -22,12 +21,6 @@ app.set('port', port);
  */
 
 var server = http.createServer(app);
-
-/**
- * Create WSS
- */
-
-// wss(server);
 
 /**
  * Listen on provided port, on all network interfaces.
