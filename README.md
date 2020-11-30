@@ -1,11 +1,11 @@
 # Minimum Viable Express Typescript Application
 
-## Quick start 
+## Quick start
 
 Start dev server at `http://localhost:3000`. Monitor changes in `src`
 
 ```
-npm run dev 
+npm run dev
 ```
 
 Serve server at `http://localhost:3000`

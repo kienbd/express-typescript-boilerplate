@@ -1,10 +1,10 @@
 FROM node:latest
 
-WORKDIR /usr/src/app 
+WORKDIR /var/app
 
 COPY package*.json ./
 
-RUN npm install
+RUN npm ci 
 
 COPY . .
 
@@ -13,5 +13,3 @@ RUN npm run build
 EXPOSE 3000
 ENTRYPOINT [ "npm", "run" ]
 CMD [ "start" ]
-
-ONBUILD RUN mv /usr/src/app /usr/src/server
